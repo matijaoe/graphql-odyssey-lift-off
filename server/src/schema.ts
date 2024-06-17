@@ -8,7 +8,7 @@ export const typeDefs = gql`
 	}
 
 	"A track is a group of Modules that teaches about a specific topic"
-type Track {
+	type Track {
 		id: ID!
 		"the track's title"
 		title: String!

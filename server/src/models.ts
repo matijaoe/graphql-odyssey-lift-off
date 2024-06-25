@@ -8,4 +8,4 @@ export type TrackModel = WithId<Track, 'author'>
 
 export type AuthorModel = Author
 
-export type ModuleModel = Module
+export type ModuleModel = WithId<Module, 'author'> & WithId<Module, 'track'>

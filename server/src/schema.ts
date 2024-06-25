@@ -25,27 +25,22 @@ export const typeDefs = gql`
 		description: String
 		"The number of times a track has been viewed"
 		numberOfViews: Int
+		"the track's complete array of Modules"
 		modules: [Module!]!
 	}
-
-	# type Module {
-	# 	id: ID!
-	# 	title: String!
-	# 	track: Track!
-	# 	authorId: Author!
-	# 	topic: String!
-	# 	length: Int!
-	# 	content: String!
-	# 	videoUrl: String!
-	# }
 
 	"A Module is a single unit of teaching. Multiple Modules compose a Track"
 	type Module {
 		id: ID!
 		"The Module's title"
 		title: String!
+		track: Track
+		author: Author
+		topic: String!
 		"The Module's length in minutes"
-		length: Int
+		length: Int!
+		content: String!
+		videoUrl: String!
 	}
 
 	"Author of a complete Track"

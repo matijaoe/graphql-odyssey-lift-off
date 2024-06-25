@@ -20,4 +20,12 @@ export const resolvers: Resolvers = {
 			return dataSources.trackAPI.getTrackModules(trackId)
 		},
 	},
+	Module: {
+		author: ({ authorId }, _, { dataSources }) => {
+			return dataSources.trackAPI.getAuthor(authorId)
+		},
+		track: ({ trackId }, _, { dataSources }) => {
+			return dataSources.trackAPI.getTrack(trackId)
+		},
+	},
 }

@@ -1,4 +1,3 @@
-import { DataSourceContext } from './context'
 import { Resolvers } from './types'
 
 export const resolvers: Resolvers = {
